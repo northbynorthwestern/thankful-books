@@ -1,0 +1,8 @@
+{
+  "name": "goose-father",
+  "private": true,
+  "dependencies": {
+    "jquery": "1",
+    "nbnteractive-styles": "northbynorthwestern/nbnteractive-styles"
+  }
+}
