@@ -13,8 +13,6 @@ $white: rgba(80,31,132,.01);
 @import 'nbnteractive-styles/theme/theme';
 
 body {
-	// background-image: url('../img/paper.png');
-	// background-repeat: repeat;
 	background-color: $white;
 }
 
@@ -30,7 +28,7 @@ p {
 	font-family: $sans-serif;
 	font-size: 1em;
 	margin-bottom: 1em;
-	line-height: 1.4;
+	line-height: 1.45;
 }
 
 hr {
@@ -49,29 +47,28 @@ header {
 		font-family: $playfair-display;
 		font-size: 5em;
 		margin: 0;
+		line-height: 1.2;
 		font-weight: 900;
 		font-style: italic;;
 		text-transform: lowercase;
 		color: $dark-gray;
 	}
+
 	.author {
 		font-family: 'Proxima Nova', sans-serif;
-		padding-top: 2%;
+		padding-top: 3%;
 		font-weight: 300;
 		text-transform: uppercase;
 		color: $mauve;
 	}
 }
 
-.is-checked {
-	background-color: $mauve;
-	color: #f4f3f3;
+#filters {
+	padding-top: 3%;
 }
 
-h3 {
-	text-transform: uppercase;
-	color: $dark-gray;
-	font-weight: 400;
+.isotope {
+	padding-bottom: 3%;
 }
 
 .element-item {
@@ -80,7 +77,6 @@ h3 {
 	width: 31%;
 	margin: 5px;
 	padding: 3%;
-	//background: #888;
 	color: #262524;
 	background-image: url('../img/paper.png');
 	h4 {
@@ -91,6 +87,74 @@ h3 {
 	}
 }
 
+.ui-group {
+	h3 {
+		padding-bottom: 5px;
+	}
+
+	.btn {
+		border: none;
+		font-family: inherit;
+		font-size: inherit;
+		color: inherit;
+		cursor: pointer;
+		padding: 10px 20px;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: 300;
+		outline: none;
+		position: relative;
+		background-color: #f4f3f3;
+		color: $dark-gray;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		transition: all 0.3s;
+		&:hover {
+			background-color: #d4d0d0;
+		}
+	}
+
+	.is-checked {
+		background-color: $mauve;
+		color: #f4f3f3;
+	}
+}
+
+
+
+h3 {
+	text-transform: uppercase;
+	color: $dark-gray;
+	font-weight: 600;
+}
+
+.pullquote {
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-weight: 600;
+	display: block;
+	width: 50%;
+	font-size: 1.5em;
+	line-height: 1.4em;
+	color: $mauve;
+}
+.pullquote-style1 {
+	float: right;
+	padding: 0 0 0 15px;
+	margin: 0 0 20px 20px;
+	text-align: right;
+	border-left: 3px solid #ccc;
+}
+
+.pullquote-style2 {
+	float: left;
+	padding: 0 15px 0 0;
+	margin: 0 20px 20px 0;
+	text-align: left;
+	border-right: 3px solid #ccc;
+}
+
 .credits {
 	margin-top: 0.25em;
 }
@@ -99,4 +163,14 @@ h3 {
   .container {
   	width: 100%;
   }
+}
+
+@media only screen and (max-width : 480px) {
+	.element-item {
+		width: 100%;
+	}
+
+	.pullquote {
+		font-size: 1.2em;
+	}
 }
