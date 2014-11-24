@@ -1,1 +1,1 @@
-Feature on goose fathers by Lucy Wang
+Writing section project on books people are thankful for

@@ -4,33 +4,17 @@ $(document).ready(function() {
     var $container = $('.isotope').isotope({
       itemSelector: '.element-item'
     });
+  });
+  // show/hide overlays
+  $('.md-trigger').on('click', function() {
+    $('.md-overlay').css('visibility', 'visible');
+  });
 
-    // store filter for each group
-    var filters = {};
+  $('.md-close').on('click', function() {
+    $('.md-overlay').css('visibility', 'hidden');
+  });
 
-    $('#filters').on( 'click', '.btn', function() {
-      var $this = $(this);
-      // get group key
-      var $buttonGroup = $this.parents('.button-group');
-      var filterGroup = $buttonGroup.attr('data-filter-group');
-      // set filter for group
-      filters[ filterGroup ] = $this.attr('data-filter');
-      // combine filters
-      var filterValue = '';
-      for ( var prop in filters ) {
-        filterValue += filters[ prop ];
-      }
-      // set filter for Isotope
-      $container.isotope({ filter: filterValue });
-    });
-
-    // change is-checked class on buttons
-    $('.button-group').each( function( i, buttonGroup ) {
-      var $buttonGroup = $( buttonGroup );
-      $buttonGroup.on( 'click', 'button', function() {
-        $buttonGroup.find('.is-checked').removeClass('is-checked');
-        $( this ).addClass('is-checked');
-      });
-    });
+  $('.md-overlay').on('click', function() {
+    $('.md-overlay').css('visibility', 'hidden');
   });
 });
